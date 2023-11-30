@@ -5,7 +5,7 @@ import numpy as np
 cfg={'canvas':(100000,100000),'bgcolor':(0,0,0),'tracer':16,'async':1}
 
 lights=[]
-s=2
+s=4
 for x in np.arange(-80,80,s):
     light=Light(line=Line(Dot(x,0),Dot(x,1),False,True),
                 recursion=100)

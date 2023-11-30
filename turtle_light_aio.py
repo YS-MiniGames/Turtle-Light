@@ -365,7 +365,7 @@ def update(*items,**cfg):
     while i<len(process_queue):
         process_queue[i](draw_queue,process_queue)
         i+=1
-        if cfg['async']==0 or i%cfg['async']==0:
+        if cfg['async']!=0 and i%cfg['async']==0:
             j=0
             while j<len(draw_queue):
                 draw_queue[j]()
